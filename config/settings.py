@@ -134,3 +134,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
 }
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
