@@ -4,5 +4,11 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
 class CustomUser(AbstractUser):
+    ROLE_CHOICES = (
+        ('customer', 'Cliente'),
+        ('seller', 'Vendedor')
+    )
+
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, default="customer")
     address = models.CharField(max_length=255, blank=True, null=True)
     phone_numbre = models.CharField(max_length=20, blank=True, null=True)
